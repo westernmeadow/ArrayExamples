@@ -32,16 +32,36 @@ class Main
         System.out.println("*** PRINTING ar1 *");
         int[] ar1 = new int[n];
         
+        for (int i=0;i<n;i++)
+            ar1[i] = i;
+            
+        for (int i=0;i<n;i++)
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        
         /*
          * Task 2.  Create a new array called ar2.
          *          Copy the elements of ar1 into ar2.
          */
+        System.out.println("*** PRINTING ar2 *");
+        // int[] ar2 = ar1.clone()
+        int[] ar2 = new int[ar1.length];
+        
+        for (int i=0;i<ar1.length;i++)
+            ar2[i] = ar1[i];
+            
+        for (int i=0;i<n;i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);           
         
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
-
+        System.out.println("*** PRINTING ar1 *");        
         
+        for (int i=0;i<n;i++)
+            ar1[i] = ar1[i]+1;
+        
+        for (int i=0;i<n;i++)
+            System.out.println("ar1["+i+"] = "+ar1[i]);
         
         /*
          * task 4. Create a new array called ar3.
@@ -50,8 +70,8 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
-        
-        
+        System.out.println("*** PRINTING ar3 *");                
+        int[] ar3 = new int[n];
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
