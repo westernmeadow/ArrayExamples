@@ -110,6 +110,23 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("*** PRINTING ar1 *\n2nd to (n-1)th");                
+        for (int i=1;i<ar1.length-1;i++)
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        
+        System.out.println("Odd");
+        for (int i=0;i<ar1.length;i++)
+        {
+            if (ar1[i]%2==1)
+                System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
+        
+        System.out.println("Multiples of 3");
+        for (int i=0;i<ar1.length;i++)
+        {
+            if (ar1[i]%3==0)
+                System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
         
         /*
          * Task 7.  For each element in ar1, 
@@ -122,6 +139,13 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
+        System.out.println("*** PRINTING ar1 *");
+        for (int i=0;i<ar1.length;i++)
+        {
+            if (ar1[i]%2==1)
+                ar1[i] = ar1[i]*10;
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
         
          /*
           * Task 8
@@ -133,7 +157,14 @@ class Main
           *    ar2[2]=2
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
-         
+        System.out.println("*** PRINTING ar2odds *");
+        int[] ar2odds;
+        for (int i=0;i<ar2.length;i++)
+        {
+            if (ar2[i]%2==1)
+                ar2odds[i] = ar2[i];
+        }
+        
         /*
          * Task 9. In the array ar2, count how many odd numbers you
          * have.  Then create an ew array called ar4.  Copy just the odd
