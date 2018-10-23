@@ -205,12 +205,29 @@ class Main
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
+        System.out.println("Shift right by 1");        
+        temp = ar4[ar4.length-1];
+        for (int i=ar4.length-1;i>0;i--)
+            ar4[i] = ar4[i-1];
+        ar4[0] = temp;
         
-        
+        for (int i=0;i<k;i++)
+            System.out.println("ar4["+i+"] = "+ar4[i]);
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
+        System.out.println("*** PRINTING ar2 (reverse order) *");
+        for (int i=0;i<ar2.length/2;i++)
+        {
+            temp = ar2[i];
+            ar2[i] = ar2[ar2.length-1-i];
+            ar2[ar2.length-1-i] = temp;
+        }
         
+        for (int i=0;i<ar2.length;i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        // 1 2 3 4   4 3 2 1
         
         /*
          * Task 12: 
