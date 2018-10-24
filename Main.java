@@ -226,8 +226,15 @@ class Main
         
         for (int i=0;i<ar2.length;i++)
             System.out.println("ar2["+i+"] = "+ar2[i]);
+        
+        int[] ar2new = new int[ar2.length];
+        for (int i=0;i<ar2.length;i++)
+            ar2new[ar2.length-1-i] = ar2[i];
+        for (int i=0;i<ar2.length;i++)
+            ar2new[i] = ar2[ar2.length-1-i];
             
-        // 1 2 3 4   4 3 2 1
+        for (int i=0;i<ar2.length;i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]); 
         
         /*
          * Task 12: 
@@ -252,6 +259,8 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
+        String[] ar5 = new String[16];
+        ar5[0] = "Four";
         
         /*
          * Task 13
