@@ -312,7 +312,8 @@ class Main
         
         for (int i=0;i<monsterArray.length;i++)
         {
-            if (monsterArray[i].charAt(0));
+            if (monsterArray[i].charAt(0)=='A'||monsterArray[i].charAt(0)=='E'||monsterArray[i].charAt(0)=='I'||monsterArray[i].charAt(0)=='O'||monsterArray[i].charAt(0)=='U')
+                System.out.println(monsterArray[i]);
         }
         
          /*
@@ -330,6 +331,18 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
+        int[] arx = new int[92];
+        for (int i=0;i<arx.length;i++)
+            arx[i] = i+3;
+        k = 0;
+        for (int i=0;i<arx.length;i++)
+        {
+            if (arx[i]%3==0)
+                k++;
+        }
+       
+        for (int i=0;i<k;i++)
+            System.out.println("arindex["+i+"] = "+arindex[i]); 
          
          /*
           * Create an arrary called "fb" and calculate the
