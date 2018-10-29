@@ -281,7 +281,7 @@ class Main
         for (int i=0;i<ar6.length;i++)
             ar6[i] = ar5[i].length();
         
-        k=0;
+        k = 0;
         for (int i=0;i<ar6.length;i++)
         {
             if (ar6[i]>=5)
@@ -312,7 +312,8 @@ class Main
         
         for (int i=0;i<monsterArray.length;i++)
         {
-            if (monsterArray[i].charAt(0)=='A'||monsterArray[i].charAt(0)=='E'||monsterArray[i].charAt(0)=='I'||monsterArray[i].charAt(0)=='O'||monsterArray[i].charAt(0)=='U')
+            char c=monsterArray[i].toLowerCase().charAt(0);
+            if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
                 System.out.println(monsterArray[i]);
         }
         
@@ -331,17 +332,28 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
+        System.out.println("*** PRINGTING arindex *");
         int[] arx = new int[92];
+        k = 0;
         for (int i=0;i<arx.length;i++)
+        {
             arx[i] = i+3;
+            if (arx[i]%3==0)
+                k++;
+        }
+
+        int[] arindex = new int[k];
         k = 0;
         for (int i=0;i<arx.length;i++)
         {
             if (arx[i]%3==0)
+            {
+                arindex[k] = i;
                 k++;
+            }
         }
-       
-        for (int i=0;i<k;i++)
+        
+        for (int i=0;i<arindex.length;i++)
             System.out.println("arindex["+i+"] = "+arindex[i]); 
          
          /*
@@ -353,6 +365,14 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-        
+        System.out.println("*** PRINTING fb (first 10) *");
+        int[] fb = new int[11];
+        fb[0] = 1;
+        fb[1] = 1;
+        for (int i=2;i<fb.length;i++)
+            fb[i] = fb[i-2]+fb[i-1];
+            
+        for (int i=0;i<fb.length;i++)
+            System.out.println("fb["+i+"] = "+fb[i]);
     }
 }
